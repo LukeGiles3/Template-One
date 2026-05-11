@@ -1,0 +1,22 @@
+---
+import BusinessLogo from "../header/businessLogo.astro"
+import CallNow from "../header/callNow.astro"
+import NavLinks from "./navLinks.astro"
+---
+
+<header class="site-header">
+    <BusinessLogo />
+    <NavLinks />
+    <CallNow />
+</header>
+
+<style>
+    .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: burlywood;
+    color: black;
+  }
+</style>

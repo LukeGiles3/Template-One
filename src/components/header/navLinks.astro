@@ -1,0 +1,22 @@
+---
+import NavLink from "../header/navLink.astro"
+const linkOne = "Services"
+const linkOneHref = "/services"
+const linkTwo = "About"
+const linkTwoHref = "/about"
+const linkThree = "Contact"
+const linkThreeHref = "/contact"
+---
+
+<div class="navLinks">
+    <NavLink linkName={linkOne} linkHref={linkOneHref}/>
+    <NavLink linkName={linkTwo} linkHref={linkTwoHref}/>
+    <NavLink linkName={linkThree} linkHref={linkThreeHref}/>
+</div>
+
+<style>
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
