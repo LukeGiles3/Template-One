@@ -1,0 +1,21 @@
+{
+  "header": {
+    "links": [
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Services",
+        "href": "/services"
+      },
+      {
+        "name": "Contact",
+        "href": "/contact"
+      }
+    ],
+    "callNow": {
+      "phoneNumber": "+3856667243"
+    }
+  }
+}

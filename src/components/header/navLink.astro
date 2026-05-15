@@ -1,5 +1,10 @@
 ---
-const { linkName, linkHref } = Astro.props;
+interface Props {
+  linkName: string;
+  linkHref: string;
+}
+
+const { linkName, linkHref } = Astro.props as Props;
 ---
 
 <a href={linkHref}>{linkName}</a>
