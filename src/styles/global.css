@@ -1,0 +1,122 @@
+/* PAGES */
+/* src/pages/about.astro */
+
+/* src/pages/contact.astro */
+
+/* src/pages/index.astro */
+
+/* src/pages/services.astro */
+body {
+  margin: 0;
+  background-color: #F0EBDD;
+  font-family: sans-serif;
+  font-size: 32px;
+}
+
+/* COMPONENTS */
+/* src/components/button/primaryButton.astro */
+.primary {
+  background-color: crimson;
+}
+
+/* src/components/button/secondaryButton.astro */
+.secondary {
+  background-color: aqua;
+}
+
+/* src/components/footer/footer.astro */
+
+/* src/components/header/businessLogo.astro */
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: 0.3s;
+}
+
+.logo-img:hover {
+  opacity: 0.8;
+}
+
+/* src/components/header/callNow.astro */
+.call-now-link {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* src/components/header/header.astro */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: burlywood;
+  color: black;
+}
+
+/* src/components/header/navLink.astro */
+.nav-link {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 10px;
+  padding: 0 0.25rem;
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  box-shadow: inset 150px 0 0 0 #54b3d6;
+  color: white;
+}
+
+/* src/components/header/navLinks.astro */
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .navLinks {
+    display: none;
+  }
+}
+
+/* src/components/hero/heroContainer.astro */
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../assets/pexels-artbovich-8143683.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 1000px;
+  background-position: bottom;
+  color: white;
+}
+
+.heroDivContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroDivContent h1 {
+    padding: 5px;
+}
+
+.heroButtons {
+    text-align: center;
+}

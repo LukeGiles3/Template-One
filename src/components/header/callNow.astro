@@ -1,8 +1,7 @@
 ---
-
-const { phoneNumber } = Astro.props as Props;
+import siteContent from "../../data/site-content.json";
 ---
 
-<a href=`tel:{ phoneNumber }` style="background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-  📞 Call Now!
+<a href={`tel:${siteContent.header.callNow.phoneNumber}`} class="call-now-link">
+  Call Now!
 </a>

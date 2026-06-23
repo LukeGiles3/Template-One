@@ -1,27 +1,5 @@
 ---
-interface Props {
-  linkName: string;
-  linkHref: string;
-}
-
-const { linkName, linkHref } = Astro.props as Props;
+const { linkName, linkHref } = Astro.props;
 ---
 
-<a href={linkHref}>{linkName}</a>
-
-<style>
-  a {
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
-    margin: 0 10px;
-    padding: 0 0.25rem;
-    transition:
-      color 0.3s ease-in-out,
-      box-shadow 0.3s ease-in-out;
-    text-decoration: none;
-  }
-  a:hover {
-    box-shadow: inset 150px 0 0 0 #54b3d6;
-    color: white;
-  }
-</style>
+<a href={linkHref} class="nav-link">{linkName}</a>

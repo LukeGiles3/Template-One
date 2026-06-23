@@ -17,5 +17,9 @@
     "callNow": {
       "phoneNumber": "+3856667243"
     }
+  },
+  "hero": {
+    "freeQuote": "Get a Free Quote",
+    "viewServices": "View Services"
   }
 }
