@@ -8,20 +8,66 @@
 /* src/pages/services.astro */
 body {
   margin: 0;
-  background-color: #F0EBDD;
+  background-color: var(--secondary-color);
   font-family: sans-serif;
   font-size: 32px;
 }
 
 /* COMPONENTS */
 /* src/components/button/primaryButton.astro */
-.primary {
-  background-color: crimson;
+.primaryButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-dark-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-dark-color);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--secondary-dark-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 5px 5px 0px var(--secondary-color);
+}
+
+.primaryButton:active {
+  box-shadow: none;
+  transform: translateY(4px);
 }
 
 /* src/components/button/secondaryButton.astro */
-.secondary {
-  background-color: aqua;
+.secondaryButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-dark-color);
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-dark-color);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--secondary-dark-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  box-shadow: 5px 5px 0px var(--primary-color);
+}
+
+.secondaryButton:active {
+  box-shadow: none;
+  transform: translateY(4px);
 }
 
 /* src/components/footer/footer.astro */
@@ -45,8 +91,8 @@ body {
 
 /* src/components/header/callNow.astro */
 .call-now-link {
-  background-color: #28a745;
-  color: white;
+  background-color: var(--primary-dark-color);
+  color: var(--secondary-color);
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -59,14 +105,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: burlywood;
-  color: black;
+  background-color: var(--teritiary-dark-color);
+  color: var(--secondary-dark-color);
 }
 
 /* src/components/header/navLink.astro */
 .nav-link {
-  box-shadow: inset 0 0 0 0 #54b3d6;
-  color: #54b3d6;
+  box-shadow: inset 0 0 0 0 var(--primary-color);
+  color: var(--primary-color);
   margin: 0 10px;
   padding: 0 0.25rem;
   transition:
@@ -76,8 +122,8 @@ body {
 }
 
 .nav-link:hover {
-  box-shadow: inset 150px 0 0 0 #54b3d6;
-  color: white;
+  box-shadow: inset 150px 0 0 0 var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* src/components/header/navLinks.astro */
@@ -99,12 +145,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../assets/pexels-artbovich-8143683.jpg');
+  background-image: url("../assets/pexels-artbovich-8143683.jpg");
   background-size: cover;
   background-attachment: fixed;
   min-height: 1000px;
   background-position: bottom;
-  color: white;
+  color: var(--secondary-color);
 }
 
 .heroDivContent {
@@ -114,9 +160,19 @@ body {
 }
 
 .heroDivContent h1 {
-    padding: 5px;
+  padding: 5px;
 }
 
 .heroButtons {
-    text-align: center;
+  text-align: center;
+}
+
+/* COLOR SCHEME */
+:root {
+  --primary-color: #398CBF;
+  --secondary-color: #f0ebdd;
+  --primary-dark-color: #6C773F;
+  --secondary-dark-color: #172601;
+  --tertiary-color: #B0BF3B;
+  --teritiary-dark-color: #DEB887;
 }
