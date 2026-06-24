@@ -1,9 +1,10 @@
 ---
 import Footer from "../components/footer/footer.astro"
 import Header from "../components/header/header.astro"
+import siteContent from "../data/site-content.json"
 import "../styles/global.css"
 ---
 
 <Header />
-<h1>about</h1>
+<h1>{siteContent.pages.about.heading}</h1>
 <Footer />

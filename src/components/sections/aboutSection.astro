@@ -1,0 +1,16 @@
+---
+import SecondaryButton from "../button/secondaryButton.astro"
+import aboutImage from "../../assets/guyWithTractor.png"
+import siteContent from "../../data/site-content.json"
+---
+
+<section class="aboutSection">
+    <div class="aboutDivContent">
+        <h1>{siteContent.components.sections.aboutSection.heading}</h1>
+        <h5>{siteContent.components.sections.aboutSection.body}</h5>
+        <SecondaryButton buttonText={siteContent.components.sections.aboutSection.buttonText}/>
+    </div>
+    <div class="aboutImgWrap">
+        <img class="aboutImg" src={aboutImage.src} alt={siteContent.components.sections.aboutSection.imageAlt}>
+    </div>
+</section>

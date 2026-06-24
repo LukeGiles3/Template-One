@@ -2,6 +2,6 @@
 import siteContent from "../../data/site-content.json";
 ---
 
-<a href={`tel:${siteContent.header.callNow.phoneNumber}`} class="call-now-link">
-  Call Now!
+<a href={`tel:${siteContent.components.header.callNow.phoneNumber}`} class="call-now-button btn-pulse">
+  {siteContent.components.header.callNow.label}
 </a>

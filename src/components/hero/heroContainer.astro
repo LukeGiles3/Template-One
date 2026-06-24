@@ -1,15 +1,17 @@
 ---
 import PrimaryButton from "../button/primaryButton.astro"
 import SecondaryButton from "../button/secondaryButton.astro"
+import siteContent from "../../data/site-content.json"
 ---
 
 <section class="heroSection">
     <div class="heroDivContent">
-        <h1>memories are made here</h1>
-        <h3>quality outdoor landscaping services</h3>
+        <h1>{siteContent.components.hero.heading}</h1>
+        <h3>{siteContent.components.hero.subheading}</h3>
+        <h5>{siteContent.components.hero.eyebrow}</h5>
     </div>
     <div class="heroButtons">
-        <PrimaryButton buttonText="Get a Free Quote"/>
-        <SecondaryButton buttonText="View Services"/>
+        <PrimaryButton buttonText={siteContent.components.hero.primaryButton}/>
+        <SecondaryButton buttonText={siteContent.components.hero.secondaryButton}/>
     </div>
 </section>

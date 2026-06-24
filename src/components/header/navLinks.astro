@@ -4,7 +4,7 @@ import siteContent from "../../data/site-content.json";
 ---
 
 <div class="navLinks">
-  {siteContent.header.links.map(({ name, href }) => (
+  {siteContent.components.header.links.map(({ name, href }) => (
     <NavLink linkName={name} linkHref={href} />
   ))}
 </div>

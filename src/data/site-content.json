@@ -1,25 +1,54 @@
 {
-  "header": {
-    "links": [
-      {
-        "name": "About",
-        "href": "/about"
-      },
-      {
-        "name": "Services",
-        "href": "/services"
-      },
-      {
-        "name": "Contact",
-        "href": "/contact"
-      }
-    ],
-    "callNow": {
-      "phoneNumber": "+3856667243"
+  "pages": {
+    "about": {
+      "heading": "about"
+    },
+    "contact": {
+      "heading": "contact"
+    },
+    "home": {},
+    "services": {
+      "heading": "services"
     }
   },
-  "hero": {
-    "freeQuote": "Get a Free Quote",
-    "viewServices": "View Services"
+  "components": {
+    "header": {
+      "businessLogo": {
+        "imageAlt": "Company Logo"
+      },
+      "links": [
+        {
+          "name": "About",
+          "href": "/about"
+        },
+        {
+          "name": "Services",
+          "href": "/services"
+        },
+        {
+          "name": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "callNow": {
+        "label": "Call Now!",
+        "phoneNumber": "+3856667243"
+      }
+    },
+    "hero": {
+      "heading": "Best Landscaping Co.",
+      "subheading": "Quality outdoor landscaping services",
+      "eyebrow": "Serving Utah County",
+      "primaryButton": "Get a Free Quote",
+      "secondaryButton": "View Services"
+    },
+    "sections": {
+      "aboutSection": {
+        "heading": "About Our Services",
+        "body": "B. Mor & Moreaus is dedicated to providing top-notch agricultural contracting services. With a focus on plowing, planting, harvesting, and maintenance, we ensure fast and efficient solutions to boost farm productivity. Our commitment is to deliver quality services at competitive prices, making us the preferred choice for all agricultural needs.",
+        "buttonText": "About Us",
+        "imageAlt": "Guy with a tractor"
+      }
+    }
   }
 }
