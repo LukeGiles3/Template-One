@@ -1,0 +1,20 @@
+---
+import siteContent from "../../data/site-content.json";
+
+const testimonialsContent = siteContent.components.sections.testimonialsSection;
+---
+
+<section class="testimonialsSection">
+  <div class="testimonialsSectionInner">
+    <h2>{testimonialsContent.heading}</h2>
+
+    <div class="testimonialsGrid">
+      {testimonialsContent.items.map((item) => (
+        <article class="testimonialCard">
+          <p class="testimonialQuote">"{item.quote}"</p>
+          <p class="testimonialName">{item.name}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
