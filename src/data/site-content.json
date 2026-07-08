@@ -35,6 +35,15 @@
         "phoneNumber": "+3856667243"
       }
     },
+    "form": {
+      "heading": "Start Your Project",
+      "body": "Tell us what you need and we will get back to you with a clear next step.",
+      "emailLabel": "Your email",
+      "emailPlaceholder": "name@example.com",
+      "messageLabel": "Your message",
+      "messagePlaceholder": "What can we help with?",
+      "submitLabel": "Send Message"
+    },
     "hero": {
       "heading": "Best Landscaping Co.",
       "subheading": "Quality outdoor landscaping services",

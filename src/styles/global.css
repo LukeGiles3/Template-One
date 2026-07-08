@@ -80,6 +80,134 @@ body {
 
 /* src/components/footer/footer.astro */
 
+/* src/components/form/form.astro */
+.formSection {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  padding: clamp(48px, 7vw, 96px);
+  background-color: var(--tertiary-color);
+  border-top: 4px solid var(--secondary-dark-color);
+  border-bottom: 4px solid var(--secondary-dark-color);
+}
+
+.formIntro {
+  padding: clamp(24px, 4vw, 44px);
+  background-color: var(--secondary-color);
+  border: 4px solid var(--secondary-dark-color);
+  box-shadow: 10px 10px 0 var(--secondary-dark-color);
+  transform: rotate(-1deg);
+}
+
+.formIntro h2 {
+  margin: 0 0 18px;
+  color: var(--secondary-dark-color);
+  font-size: clamp(44px, 5vw, 76px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.formIntro p {
+  margin: 0;
+  color: var(--secondary-dark-color);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.contactForm {
+  display: grid;
+  gap: 24px;
+  padding: clamp(24px, 4vw, 44px);
+  background-color: var(--secondary-color);
+  border: 4px solid var(--secondary-dark-color);
+  box-shadow: 12px 12px 0 var(--secondary-dark-color);
+}
+
+.formField {
+  display: grid;
+  gap: 10px;
+  color: var(--secondary-dark-color);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.formField span {
+  width: fit-content;
+  padding: 4px 10px;
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-dark-color);
+  box-shadow: 4px 4px 0 var(--secondary-dark-color);
+}
+
+.formField input,
+.formField textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  color: var(--secondary-dark-color);
+  background-color: white;
+  border: 4px solid var(--secondary-dark-color);
+  border-radius: 0;
+  box-shadow: 6px 6px 0 var(--secondary-dark-color);
+  font: inherit;
+  font-size: 20px;
+  outline: none;
+}
+
+.formField textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.formField input:focus,
+.formField textarea:focus {
+  background-color: var(--primary-color);
+  box-shadow: 3px 3px 0 var(--secondary-dark-color);
+  transform: translate(3px, 3px);
+}
+
+.formSubmit {
+  justify-self: start;
+  padding: 18px 30px;
+  color: var(--secondary-color);
+  background-color: var(--secondary-dark-color);
+  border: 4px solid var(--secondary-dark-color);
+  border-radius: 0;
+  box-shadow: 7px 7px 0 var(--primary-color);
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 900;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.formSubmit:hover {
+  color: var(--secondary-dark-color);
+  background-color: var(--primary-color);
+  box-shadow: 4px 4px 0 var(--secondary-dark-color);
+  transform: translate(3px, 3px);
+}
+
+.formSubmit:active {
+  box-shadow: none;
+  transform: translate(7px, 7px);
+}
+
+@media (max-width: 850px) {
+  .formSection {
+    grid-template-columns: 1fr;
+  }
+
+  .formIntro {
+    transform: none;
+  }
+}
+
 /* src/components/header/businessLogo.astro */
 .logo-link {
   display: inline-block;

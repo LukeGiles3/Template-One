@@ -1,0 +1,39 @@
+---
+import siteContent from "../../data/site-content.json";
+
+const formContent = siteContent.components.form;
+---
+
+<section class="formSection">
+  <div class="formIntro">
+    <h2>{formContent.heading}</h2>
+    <p>{formContent.body}</p>
+  </div>
+
+  <form
+    class="contactForm"
+    action="https://formspree.io/f/xrewlwne"
+    method="POST"
+  >
+    <label class="formField">
+      <span>{formContent.emailLabel}</span>
+      <input
+        type="email"
+        name="email"
+        placeholder={formContent.emailPlaceholder}
+        required
+      >
+    </label>
+
+    <label class="formField">
+      <span>{formContent.messageLabel}</span>
+      <textarea
+        name="message"
+        placeholder={formContent.messagePlaceholder}
+        required
+      ></textarea>
+    </label>
+
+    <button class="formSubmit" type="submit">{formContent.submitLabel}</button>
+  </form>
+</section>
