@@ -79,6 +79,125 @@ body {
 }
 
 /* src/components/footer/footer.astro */
+.siteFooter {
+  padding: clamp(36px, 5vw, 56px) clamp(24px, 5vw, 48px) 22px;
+  color: var(--secondary-color);
+  background-color: var(--secondary-dark-color);
+}
+
+.siteFooterInner {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.2fr) repeat(3, minmax(180px, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.footerBrand {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.footerLogoLink {
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border: 3px solid var(--tertiary-color);
+}
+
+.footerLogo {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+.footerBrandCopy {
+  display: grid;
+  gap: 10px;
+}
+
+.footerBrandCopy h2,
+.footerColumn h3 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: clamp(24px, 2vw, 32px);
+  line-height: 1;
+}
+
+.footerBrandCopy p,
+.footerColumn p,
+.footerColumn a,
+.footerColumn span,
+.siteFooterBottom p {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.55;
+  text-decoration: none;
+}
+
+.footerColumn {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+
+.footerColumn h3::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin-top: 12px;
+  background-color: var(--tertiary-color);
+}
+
+.footerList {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footerList a {
+  transition: color 0.2s ease;
+}
+
+.footerList a:hover {
+  color: var(--tertiary-color);
+}
+
+.footerList li {
+  display: grid;
+  gap: 4px;
+}
+
+.footerContactList span,
+.footerHoursList span {
+  color: var(--tertiary-color);
+  font-weight: 700;
+}
+
+.siteFooterBottom {
+  width: min(1240px, 100%);
+  margin: 28px auto 0;
+  padding-top: 18px;
+  border-top: 2px solid var(--primary-dark-color);
+}
+
+@media (max-width: 980px) {
+  .siteFooterInner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .siteFooterInner {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* src/components/form/form.astro */
 .formSection {

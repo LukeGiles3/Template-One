@@ -45,6 +45,27 @@
       "messagePlaceholder": "What can we help with?",
       "submitLabel": "Send Message"
     },
+    "footer": {
+      "businessName": "B. Mor & Moreaus",
+      "body": "Reliable outdoor work, clean execution, and straightforward service for properties across Utah County.",
+      "email": "hello@bmorandmoreaus.com",
+      "location": "Utah County, Utah",
+      "hours": [
+        {
+          "label": "Mon - Fri",
+          "value": "7:00 - 18:00"
+        },
+        {
+          "label": "Saturday",
+          "value": "8:00 - 15:00"
+        },
+        {
+          "label": "Sunday",
+          "value": "Closed"
+        }
+      ],
+      "copyright": "B. Mor & Moreaus. All rights reserved."
+    },
     "hero": {
       "image": "hero/hero-landscape.jpg",
       "heading": "Best Landscaping Co.",

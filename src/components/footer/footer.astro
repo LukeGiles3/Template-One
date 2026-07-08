@@ -1,0 +1,72 @@
+---
+import siteContent from "../../data/site-content.json";
+import { getAssetByPath } from "../../utils/getAssetByPath";
+
+const logoContent = siteContent.components.header.businessLogo;
+const headerContent = siteContent.components.header;
+const footerContent = siteContent.components.footer;
+const footerLogo = getAssetByPath(logoContent.image);
+---
+
+<footer class="siteFooter">
+  <div class="siteFooterInner">
+    <div class="footerBrand">
+      <a href="/" class="footerLogoLink">
+        <img
+          class="footerLogo"
+          src={footerLogo.src}
+          alt={logoContent.imageAlt}
+          loading="lazy"
+        />
+      </a>
+      <div class="footerBrandCopy">
+        <h2>{footerContent.businessName}</h2>
+        <p>{footerContent.body}</p>
+      </div>
+    </div>
+
+    <div class="footerColumn">
+      <h3>Site Links</h3>
+      <ul class="footerList">
+        <li><a href="/">Home</a></li>
+        {headerContent.links.map((link) => (
+          <li><a href={link.href}>{link.name}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="footerColumn">
+      <h3>Contact</h3>
+      <ul class="footerList footerContactList">
+        <li>
+          <span>Phone</span>
+          <a href={`tel:${headerContent.callNow.phoneNumber}`}>{headerContent.callNow.phoneNumber}</a>
+        </li>
+        <li>
+          <span>Email</span>
+          <a href={`mailto:${footerContent.email}`}>{footerContent.email}</a>
+        </li>
+        <li>
+          <span>Area</span>
+          <p>{footerContent.location}</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footerColumn">
+      <h3>Hours</h3>
+      <ul class="footerList footerHoursList">
+        {footerContent.hours.map((item) => (
+          <li>
+            <span>{item.label}</span>
+            <p>{item.value}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="siteFooterBottom">
+    <p>&copy; {new Date().getFullYear()} {footerContent.copyright}</p>
+  </div>
+</footer>
