@@ -14,6 +14,7 @@
   "components": {
     "header": {
       "businessLogo": {
+        "image": "brand/logo.png",
         "imageAlt": "Company Logo"
       },
       "links": [
@@ -45,6 +46,7 @@
       "submitLabel": "Send Message"
     },
     "hero": {
+      "image": "hero/hero-landscape.jpg",
       "heading": "Best Landscaping Co.",
       "subheading": "Quality outdoor landscaping services",
       "eyebrow": "Serving Utah County",
@@ -56,7 +58,50 @@
         "heading": "About Our Services",
         "body": "B. Mor & Moreaus is dedicated to providing top-notch agricultural contracting services. With a focus on plowing, planting, harvesting, and maintenance, we ensure fast and efficient solutions to boost farm productivity. Our commitment is to deliver quality services at competitive prices, making us the preferred choice for all agricultural needs.",
         "buttonText": "About Us",
+        "image": "about/guy-with-tractor.png",
         "imageAlt": "Guy with a tractor"
+      },
+      "servicesSection": {
+        "heading": "Utah Landscaping Services",
+        "body": "From full landscape installs to irrigation upgrades and retaining wall work, we build outdoor spaces that are clean, functional, and built to last. Here is how we can improve the look and performance of your property.",
+        "items": [
+          {
+            "title": "Landscaping",
+            "body": "We design and install polished front and backyard spaces with fresh planting, defined edging, and clean hardscape details.",
+            "image": "services/landscaping.png",
+            "imageAlt": "Modern residential landscaping with a stone walkway and planted beds"
+          },
+          {
+            "title": "Full Sprinkler System Installation",
+            "body": "Get efficient irrigation coverage that keeps lawns and planting beds healthy without the constant hassle of manual watering.",
+            "image": "services/sprinkler-installation.png",
+            "imageAlt": "Lawn sprinkler watering a green yard"
+          },
+          {
+            "title": "Sprinkler Repair",
+            "body": "We diagnose leaks, damaged heads, and worn irrigation lines to keep your system running smoothly through the season.",
+            "image": "services/sprinkler-repair.png",
+            "imageAlt": "Technician repairing sprinkler irrigation near a garden bed"
+          },
+          {
+            "title": "Block Retaining Walls",
+            "body": "Add structure and usable grade changes with durable block retaining walls installed for both strength and curb appeal.",
+            "image": "services/block-retaining-walls.png",
+            "imageAlt": "Contractor building a block retaining wall"
+          },
+          {
+            "title": "Rock Retaining Walls",
+            "body": "Create a more natural look with stone retaining walls that blend into the landscape while managing elevation cleanly.",
+            "image": "services/rock-retaining-walls.png",
+            "imageAlt": "Natural stone retaining wall with stairs beside a landscaped yard"
+          },
+          {
+            "title": "Garden & Lawn Care",
+            "body": "Keep your property looking sharp with healthy turf, vibrant flower beds, and consistent seasonal maintenance.",
+            "image": "services/garden-lawn-care.png",
+            "imageAlt": "Colorful garden bed beside a manicured green lawn"
+          }
+        ]
       },
       "testimonialsSection": {
         "heading": "Testimonials",

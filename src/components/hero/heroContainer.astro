@@ -2,9 +2,12 @@
 import PrimaryButton from "../button/primaryButton.astro"
 import SecondaryButton from "../button/secondaryButton.astro"
 import siteContent from "../../data/site-content.json"
+import { getAssetByPath } from "../../utils/getAssetByPath"
+
+const heroImage = getAssetByPath(siteContent.components.hero.image)
 ---
 
-<section class="heroSection">
+<section class="heroSection" style={`--hero-background-image: url(${heroImage.src})`}>
     <div class="heroDivContent">
         <h1>{siteContent.components.hero.heading}</h1>
         <h3>{siteContent.components.hero.subheading}</h3>

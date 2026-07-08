@@ -1,7 +1,10 @@
 ---
 import siteContent from "../../data/site-content.json";
+import { getAssetByPath } from "../../utils/getAssetByPath";
+
+const logoImage = getAssetByPath(siteContent.components.header.businessLogo.image);
 ---
 
 <a href="/" class="logo-link">
-  <img src="src/assets/logo.png" alt={siteContent.components.header.businessLogo.imageAlt} class="logo-img" />
+  <img src={logoImage.src} alt={siteContent.components.header.businessLogo.imageAlt} class="logo-img" />
 </a>
