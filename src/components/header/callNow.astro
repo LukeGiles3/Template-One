@@ -1,7 +1,9 @@
 ---
 import siteContent from "../../data/site-content.json";
+
+const companyInfo = siteContent.companyInfo;
 ---
 
-<a href={`tel:${siteContent.components.header.callNow.phoneNumber}`} class="call-now-button btn-pulse">
+<a href={`tel:${companyInfo.phoneNumber}`} class="call-now-button btn-pulse">
   {siteContent.components.header.callNow.label}
 </a>

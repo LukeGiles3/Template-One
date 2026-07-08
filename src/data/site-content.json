@@ -11,12 +11,18 @@
       "heading": "services"
     }
   },
-  "components": {
-    "header": {
-      "businessLogo": {
+  "companyInfo": {
+      "businessName": "Best Landscaping Co",
+      "phoneNumber": "+3856667243",
+      "email": "hello@bestlandscaping.com",
+      "location": "Utah County, Utah",
+      "logo": {
         "image": "brand/logo.png",
         "imageAlt": "Company Logo"
-      },
+      }
+    },
+  "components": {
+    "header": {
       "links": [
         {
           "name": "About",
@@ -32,8 +38,7 @@
         }
       ],
       "callNow": {
-        "label": "Call Now!",
-        "phoneNumber": "+3856667243"
+        "label": "Call Now!"
       }
     },
     "form": {
@@ -46,10 +51,7 @@
       "submitLabel": "Send Message"
     },
     "footer": {
-      "businessName": "B. Mor & Moreaus",
       "body": "Reliable outdoor work, clean execution, and straightforward service for properties across Utah County.",
-      "email": "hello@bmorandmoreaus.com",
-      "location": "Utah County, Utah",
       "hours": [
         {
           "label": "Mon - Fri",
@@ -68,7 +70,6 @@
     },
     "hero": {
       "image": "hero/hero-landscape.jpg",
-      "heading": "Best Landscaping Co.",
       "subheading": "Quality outdoor landscaping services",
       "eyebrow": "Serving Utah County",
       "primaryButton": "Get a Free Quote",

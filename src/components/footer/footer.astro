@@ -2,10 +2,11 @@
 import siteContent from "../../data/site-content.json";
 import { getAssetByPath } from "../../utils/getAssetByPath";
 
-const logoContent = siteContent.components.header.businessLogo;
+const companyInfo = siteContent.companyInfo;
 const headerContent = siteContent.components.header;
 const footerContent = siteContent.components.footer;
-const footerLogo = getAssetByPath(logoContent.image);
+const footerLogo = getAssetByPath(companyInfo.logo.image);
+const footerCopyright = footerContent.copyright.replaceAll("B. Mor & Moreaus", companyInfo.businessName);
 ---
 
 <footer class="siteFooter">
@@ -15,12 +16,12 @@ const footerLogo = getAssetByPath(logoContent.image);
         <img
           class="footerLogo"
           src={footerLogo.src}
-          alt={logoContent.imageAlt}
+          alt={companyInfo.logo.imageAlt}
           loading="lazy"
         />
       </a>
       <div class="footerBrandCopy">
-        <h2>{footerContent.businessName}</h2>
+        <h2>{companyInfo.businessName}</h2>
         <p>{footerContent.body}</p>
       </div>
     </div>
@@ -40,15 +41,15 @@ const footerLogo = getAssetByPath(logoContent.image);
       <ul class="footerList footerContactList">
         <li>
           <span>Phone</span>
-          <a href={`tel:${headerContent.callNow.phoneNumber}`}>{headerContent.callNow.phoneNumber}</a>
+          <a href={`tel:${companyInfo.phoneNumber}`}>{companyInfo.phoneNumber}</a>
         </li>
         <li>
           <span>Email</span>
-          <a href={`mailto:${footerContent.email}`}>{footerContent.email}</a>
+          <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
         </li>
         <li>
           <span>Area</span>
-          <p>{footerContent.location}</p>
+          <p>{companyInfo.location}</p>
         </li>
       </ul>
     </div>
@@ -67,6 +68,6 @@ const footerLogo = getAssetByPath(logoContent.image);
   </div>
 
   <div class="siteFooterBottom">
-    <p>&copy; {new Date().getFullYear()} {footerContent.copyright}</p>
+    <p>&copy; {new Date().getFullYear()} {footerCopyright}</p>
   </div>
 </footer>
