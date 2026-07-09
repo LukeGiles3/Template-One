@@ -1,10 +1,45 @@
 ---
 import Footer from "../components/footer/footer.astro"
+import Form from "../components/form/form.astro"
 import Header from "../components/header/header.astro"
 import siteContent from "../data/site-content.json"
 import "../styles/global.css"
+
+const contactPage = siteContent.pages.contact
+const companyInfo = siteContent.companyInfo
 ---
 
 <Header />
-<h1>{siteContent.pages.contact.heading}</h1>
+<main class="contactPage">
+  <section class="contactPageHero">
+    <div class="contactPageHeroContent">
+      <p>{contactPage.eyebrow}</p>
+      <h1>{contactPage.heading}</h1>
+      <p>{contactPage.body}</p>
+    </div>
+  </section>
+
+  <Form />
+
+  <section class="contactPageInfo">
+    <div class="contactPageInfoContent">
+      <h2>{contactPage.detailsHeading}</h2>
+      <p>{contactPage.detailsBody}</p>
+    </div>
+    <div class="contactPageDetails">
+      <a href={`tel:${companyInfo.phoneNumber}`}>
+        <span>Phone</span>
+        {companyInfo.phoneNumber}
+      </a>
+      <a href={`mailto:${companyInfo.email}`}>
+        <span>Email</span>
+        {companyInfo.email}
+      </a>
+      <p>
+        <span>Service Area</span>
+        {companyInfo.location}
+      </p>
+    </div>
+  </section>
+</main>
 <Footer />
