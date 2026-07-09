@@ -13,7 +13,7 @@ const aboutBody = aboutContent.body.replaceAll("B. Mor & Moreaus", companyInfo.b
     <div class="aboutDivContent">
         <h1>{aboutContent.heading}</h1>
         <h5>{aboutBody}</h5>
-        <SecondaryButton buttonText={aboutContent.buttonText}/>
+        <SecondaryButton buttonText={aboutContent.buttonText} href={aboutContent.buttonHref}/>
     </div>
     <div class="aboutImgWrap">
         <img class="aboutImg" src={aboutImage.src} alt={aboutContent.imageAlt}>

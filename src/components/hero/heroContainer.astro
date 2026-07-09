@@ -14,7 +14,7 @@ const heroImage = getAssetByPath(siteContent.components.hero.image)
         <h5>{siteContent.components.hero.eyebrow}</h5>
     </div>
     <div class="heroButtons">
-        <PrimaryButton buttonText={siteContent.components.hero.primaryButton}/>
-        <SecondaryButton buttonText={siteContent.components.hero.secondaryButton}/>
+        <PrimaryButton buttonText={siteContent.components.hero.primaryButton} href={siteContent.components.hero.primaryButtonHref}/>
+        <SecondaryButton buttonText={siteContent.components.hero.secondaryButton} href={siteContent.components.hero.secondaryButtonHref}/>
     </div>
 </section>

@@ -113,13 +113,16 @@
       "subheading": "Quality outdoor landscaping services",
       "eyebrow": "Serving Utah County",
       "primaryButton": "Get a Free Quote",
-      "secondaryButton": "View Services"
+      "primaryButtonHref": "/contact",
+      "secondaryButton": "View Services",
+      "secondaryButtonHref": "/services"
     },
     "sections": {
       "aboutSection": {
         "heading": "About Our Services",
         "body": "Best Landscaping Co is dedicated to providing top-notch agricultural contracting services. With a focus on plowing, planting, harvesting, and maintenance, we ensure fast and efficient solutions to boost farm productivity. Our commitment is to deliver quality services at competitive prices, making us the preferred choice for all agricultural needs.",
         "buttonText": "About Us",
+        "buttonHref": "/about",
         "image": "about/guy-with-tractor.png",
         "imageAlt": "Guy with a tractor"
       },

@@ -1,5 +1,5 @@
 ---
-const { buttonText } = Astro.props;
+const { buttonText, href = "#" } = Astro.props;
 ---
 
-<button class="primaryButton">{buttonText}</button>
+<a class="primaryButton" href={href}>{buttonText}</a>
