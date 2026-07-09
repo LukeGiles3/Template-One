@@ -337,7 +337,7 @@ h1, h3, h5 {
 
 .contactPageHero {
   padding: clamp(54px, 8vw, 112px) clamp(28px, 6vw, 84px);
-  background-color: var(--teritiary-dark-color);
+  background-color: var(--secondary-color);
   border-bottom: 4px solid var(--secondary-dark-color);
 }
 
@@ -443,7 +443,7 @@ h1, h3, h5 {
 
 .servicesPageHero {
   padding: clamp(54px, 8vw, 112px) clamp(28px, 6vw, 84px);
-  background-color: var(--teritiary-dark-color);
+  background-color: var(--secondary-color);
   border-bottom: 4px solid var(--secondary-dark-color);
 }
 
@@ -486,6 +486,7 @@ h1, h3, h5 {
   display: grid;
   gap: clamp(38px, 6vw, 86px);
   padding: clamp(52px, 7vw, 104px) clamp(28px, 6vw, 80px);
+  background-color: var(--primary-dark-color);
 }
 
 .servicesPageItem {
