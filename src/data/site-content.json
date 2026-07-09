@@ -66,7 +66,7 @@
           "value": "Closed"
         }
       ],
-      "copyright": "B. Mor & Moreaus. All rights reserved."
+      "copyright": "Best Landscaping Co. All rights reserved."
     },
     "hero": {
       "image": "hero/hero-landscape.jpg",
@@ -78,7 +78,7 @@
     "sections": {
       "aboutSection": {
         "heading": "About Our Services",
-        "body": "B. Mor & Moreaus is dedicated to providing top-notch agricultural contracting services. With a focus on plowing, planting, harvesting, and maintenance, we ensure fast and efficient solutions to boost farm productivity. Our commitment is to deliver quality services at competitive prices, making us the preferred choice for all agricultural needs.",
+        "body": "Best Landscaping Co is dedicated to providing top-notch agricultural contracting services. With a focus on plowing, planting, harvesting, and maintenance, we ensure fast and efficient solutions to boost farm productivity. Our commitment is to deliver quality services at competitive prices, making us the preferred choice for all agricultural needs.",
         "buttonText": "About Us",
         "image": "about/guy-with-tractor.png",
         "imageAlt": "Guy with a tractor"
@@ -129,15 +129,15 @@
         "heading": "Testimonials",
         "items": [
           {
-            "quote": "B. Mor & Moreaus exceeded my expectations with their speed and precision in preparing our fields. The whole crew was reliable from start to finish.",
+            "quote": "Best Landscaping Co exceeded my expectations with their speed and precision in preparing our fields. The whole crew was reliable from start to finish.",
             "name": "John Doe"
           },
           {
-            "quote": "I highly recommend B. Mor & Moreaus for their exceptional planting services. They helped us stay on schedule and made the entire process easier.",
+            "quote": "I highly recommend Best Landscaping Co for their exceptional planting services. They helped us stay on schedule and made the entire process easier.",
             "name": "Emily Smith"
           },
           {
-            "quote": "Fast, reliable, and professional. B. Mor & Moreaus brought real attention to detail and handled our harvest work without any issues.",
+            "quote": "Fast, reliable, and professional. Best Landscaping Co brought real attention to detail and handled our harvest work without any issues.",
             "name": "David Brown"
           }
         ]
