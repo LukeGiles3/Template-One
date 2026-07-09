@@ -48,7 +48,8 @@
     },
     "home": {},
     "services": {
-      "heading": "services"
+      "heading": "Utah Landscaping Services",
+      "body": "From full landscape installs to irrigation upgrades and retaining wall work, we build outdoor spaces that are clean, functional, and built to last. Here is how we can improve the look and performance of your property."
     }
   },
   "companyInfo": {
@@ -128,7 +129,6 @@
       },
       "servicesSection": {
         "heading": "Utah Landscaping Services",
-        "body": "From full landscape installs to irrigation upgrades and retaining wall work, we build outdoor spaces that are clean, functional, and built to last. Here is how we can improve the look and performance of your property.",
         "items": [
           {
             "title": "Landscaping",

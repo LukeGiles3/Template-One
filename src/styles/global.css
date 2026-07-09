@@ -335,6 +335,130 @@ h1, h3, h5 {
 /* src/pages/index.astro */
 
 /* src/pages/services.astro */
+.servicesPage {
+  background-color: var(--secondary-color);
+}
+
+.servicesPageHero {
+  padding: clamp(54px, 8vw, 112px) clamp(28px, 6vw, 84px);
+  background-color: var(--teritiary-dark-color);
+  border-bottom: 4px solid var(--secondary-dark-color);
+}
+
+.servicesPageHeroContent {
+  display: grid;
+  justify-items: center;
+  gap: 22px;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.servicesPageHeroContent > p:first-child {
+  width: fit-content;
+  margin: 0;
+  padding: 8px 14px;
+  color: var(--secondary-dark-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-dark-color);
+  box-shadow: 5px 5px 0 var(--secondary-dark-color);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 900;
+}
+
+.servicesPageHeroContent h1 {
+  margin: 0;
+  color: var(--secondary-dark-color);
+  font-size: clamp(54px, 7vw, 104px);
+  line-height: 0.9;
+}
+
+.servicesPageHeroContent > p:last-child {
+  margin: 0;
+  color: var(--primary-dark-color);
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.45;
+}
+
+.servicesPageList {
+  display: grid;
+  gap: clamp(38px, 6vw, 86px);
+  padding: clamp(52px, 7vw, 104px) clamp(28px, 6vw, 80px);
+}
+
+.servicesPageItem {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(360px, 1.05fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: stretch;
+  padding: clamp(24px, 3.5vw, 44px);
+  background-color: var(--secondary-color);
+  border: 4px solid var(--secondary-dark-color);
+  box-shadow: 12px 12px 0 var(--secondary-dark-color);
+}
+
+.servicesPageItemReverse .servicesPageItemImageWrap {
+  order: 2;
+}
+
+.servicesPageItemImageWrap {
+  overflow: hidden;
+  background-color: var(--teritiary-dark-color);
+  border: 4px solid var(--secondary-dark-color);
+}
+
+.servicesPageItemImage {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  display: block;
+  object-fit: cover;
+}
+
+.servicesPageItemContent {
+  display: grid;
+  align-content: center;
+  gap: 20px;
+}
+
+.servicesPageItemContent > p:first-child {
+  width: fit-content;
+  margin: 0;
+  padding: 7px 12px;
+  color: var(--secondary-color);
+  background-color: var(--secondary-dark-color);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 900;
+}
+
+.servicesPageItemContent h2 {
+  margin: 0;
+  color: var(--secondary-dark-color);
+  font-size: clamp(38px, 4.5vw, 68px);
+  line-height: 0.95;
+}
+
+.servicesPageItemContent > p:last-child {
+  margin: 0;
+  color: var(--primary-dark-color);
+  font-size: clamp(19px, 2vw, 26px);
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .servicesPageItem {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesPageItemReverse .servicesPageItemImageWrap {
+    order: initial;
+  }
+
+  .servicesPageItemImage {
+    min-height: 320px;
+  }
+}
+
 body {
   margin: 0;
   background-color: var(--secondary-color);
@@ -740,13 +864,6 @@ body {
   color: var(--secondary-dark-color);
   font-size: clamp(24px, 2.2vw, 34px);
   line-height: 1.1;
-}
-
-.serviceCard p {
-  margin: 0;
-  color: var(--primary-dark-color);
-  font-size: clamp(18px, 1.8vw, 24px);
-  line-height: 1.45;
 }
 
 @media (max-width: 980px) {

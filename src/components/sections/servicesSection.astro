@@ -14,7 +14,6 @@ const servicesContent = siteContent.components.sections.servicesSection;
         <span class="servicesDividerLeaf"></span>
         <span class="servicesDividerLine"></span>
       </div>
-      <p>{servicesContent.body}</p>
     </header>
 
     <div class="servicesGrid">
@@ -26,10 +25,9 @@ const servicesContent = siteContent.components.sections.servicesSection;
               src={getAssetByPath(item.image).src}
               alt={item.imageAlt}
               loading="lazy"
-            />
+          />
           </div>
           <h3>{item.title}</h3>
-          <p>{item.body}</p>
         </article>
       ))}
     </div>
