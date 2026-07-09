@@ -1,7 +1,47 @@
 {
   "pages": {
     "about": {
-      "heading": "about"
+      "heading": "about",
+      "eyebrow": "Locally owned in Utah County",
+      "introHeading": "Built around honest work and clean results",
+      "introBody": "Best Landscaping Co was started to give homeowners a straightforward landscaping partner: clear communication, dependable scheduling, and outdoor work that looks sharp when the crew leaves.",
+      "history": {
+        "heading": "Our History",
+        "body": "What began as small residential yard projects grew into a landscaping company trusted for irrigation, planting, hardscape, retaining wall, and lawn care work across Utah County. The company has stayed intentionally local so every project can get careful attention from first walkthrough to final cleanup."
+      },
+      "owner": {
+        "heading": "Meet the Owner",
+        "name": "Owner Operated",
+        "body": "The owner stays close to the work, reviewing details, communicating expectations, and making sure each property is treated with respect. That hands-on approach keeps the company practical, accountable, and focused on doing the job right.",
+        "image": "about/owner.jpg",
+        "imageAlt": "Owner of Best Landscaping Co"
+      },
+      "values": {
+        "heading": "What We Value",
+        "items": [
+          {
+            "title": "Clear Communication",
+            "body": "You should know what is happening, when it is happening, and what comes next."
+          },
+          {
+            "title": "Respect for Property",
+            "body": "Clean work areas, careful crews, and finished spaces that feel ready to use."
+          },
+          {
+            "title": "Practical Solutions",
+            "body": "Recommendations are based on what fits the property, budget, and long-term upkeep."
+          }
+        ]
+      },
+      "standards": {
+        "heading": "Our Standards",
+        "items": [
+          "Show up prepared and ready to work.",
+          "Use durable materials suited for Utah conditions.",
+          "Keep details clean, level, and finished.",
+          "Leave every project site orderly at the end of the day."
+        ]
+      }
     },
     "contact": {
       "heading": "contact"

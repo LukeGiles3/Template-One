@@ -6,6 +6,329 @@ h1, h3, h5 {
 
 /* PAGES */
 /* src/pages/about.astro */
+.aboutPage {
+  background-color: var(--secondary-color);
+}
+
+.aboutPageHero {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: 520px;
+  padding: clamp(40px, 7vw, 96px);
+  overflow: hidden;
+  border-bottom: 4px solid var(--secondary-dark-color);
+}
+
+.aboutPageHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--about-hero-image);
+  background-position: bottom;
+  background-size: cover;
+  opacity: 0.78;
+}
+
+.aboutPageHero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(23, 38, 1, 0.26);
+}
+
+.aboutPageHeroContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+  width: min(1080px, 100%);
+}
+
+.aboutPageHeroContent p {
+  width: fit-content;
+  margin: 0;
+  padding: 8px 14px;
+  color: var(--secondary-dark-color);
+  background-color: var(--tertiary-color);
+  border: 3px solid var(--secondary-dark-color);
+  box-shadow: 5px 5px 0 var(--secondary-dark-color);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 900;
+}
+
+.aboutPageHeroContent h1 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: clamp(56px, 8vw, 124px);
+  line-height: 0.9;
+  text-transform: capitalize;
+  text-shadow: 5px 5px 0 var(--secondary-dark-color);
+}
+
+.aboutPageIntro {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.05fr);
+  min-height: 720px;
+  border-bottom: 4px solid var(--secondary-dark-color);
+}
+
+.aboutPageIntroContent {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding: clamp(44px, 7vw, 104px);
+  border-right: 4px solid var(--secondary-dark-color);
+}
+
+.aboutPageIntroContent > p:first-child {
+  width: fit-content;
+  margin: 0;
+  padding: 8px 14px;
+  color: var(--secondary-dark-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-dark-color);
+  box-shadow: 5px 5px 0 var(--secondary-dark-color);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 900;
+}
+
+.aboutPageIntroContent h2,
+.aboutPageStoryCard h2,
+.aboutPageValuesHeader h2,
+.aboutPageStandards h2 {
+  margin: 0;
+  color: var(--secondary-dark-color);
+  font-size: clamp(44px, 5vw, 78px);
+  line-height: 0.95;
+}
+
+.aboutPageIntroContent > p:last-child,
+.aboutPageStoryCard p,
+.aboutPageValuesHeader p,
+.aboutPageValue p,
+.aboutPageStandards li {
+  margin: 0;
+  color: var(--primary-dark-color);
+  font-size: clamp(19px, 2vw, 26px);
+  line-height: 1.45;
+}
+
+.aboutPageDivider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.aboutPageDivider span:first-child {
+  width: 74px;
+  height: 4px;
+  background-color: var(--tertiary-color);
+}
+
+.aboutPageDivider span:last-child {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-dark-color);
+  transform: rotate(45deg);
+}
+
+.aboutPageImageWrap {
+  min-height: 100%;
+  overflow: hidden;
+  background-color: var(--teritiary-dark-color);
+}
+
+.aboutPageImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aboutPageStory {
+  display: grid;
+  padding: clamp(52px, 7vw, 104px) clamp(28px, 6vw, 80px);
+  background-color: var(--teritiary-dark-color);
+  border-bottom: 4px solid var(--secondary-dark-color);
+}
+
+.aboutPageStoryCard {
+  display: grid;
+  align-content: space-between;
+  gap: 22px;
+  padding: clamp(28px, 4vw, 48px);
+  background-color: var(--secondary-color);
+  border: 4px solid var(--secondary-dark-color);
+  box-shadow: 10px 10px 0 var(--secondary-dark-color);
+}
+
+.aboutPageOwnerCard {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: stretch;
+  background-color: var(--tertiary-color);
+}
+
+.aboutPageOwnerImageWrap {
+  overflow: hidden;
+  border: 4px solid var(--secondary-dark-color);
+  box-shadow: 7px 7px 0 var(--secondary-dark-color);
+}
+
+.aboutPageOwnerImage {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aboutPageOwnerContent {
+  display: grid;
+  align-content: center;
+  gap: 22px;
+}
+
+.aboutPageOwnerContent > p:first-child {
+  width: fit-content;
+  padding: 7px 12px;
+  color: var(--secondary-color);
+  background-color: var(--secondary-dark-color);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 900;
+}
+
+.aboutPageOwnerHistory {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+  padding-top: 24px;
+  border-top: 4px solid var(--secondary-dark-color);
+}
+
+.aboutPageOwnerHistory h3 {
+  margin: 0;
+  color: var(--secondary-dark-color);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1;
+}
+
+.aboutPageValues {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(420px, 1.3fr);
+  gap: clamp(32px, 5vw, 72px);
+  padding: clamp(52px, 7vw, 104px) clamp(28px, 6vw, 80px);
+  background-color: var(--secondary-color);
+  border-bottom: 4px solid var(--secondary-dark-color);
+}
+
+.aboutPageValuesHeader {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+}
+
+.aboutPageValuesHeader p {
+  width: fit-content;
+  padding: 8px 14px;
+  color: var(--secondary-dark-color);
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-dark-color);
+  box-shadow: 5px 5px 0 var(--secondary-dark-color);
+  font-weight: 900;
+}
+
+.aboutPageValuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 34px);
+}
+
+.aboutPageValue {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding: clamp(22px, 3vw, 34px);
+  background-color: var(--teritiary-dark-color);
+  border: 4px solid var(--secondary-dark-color);
+  box-shadow: 9px 9px 0 var(--secondary-dark-color);
+}
+
+.aboutPageValue h3 {
+  margin: 0;
+  color: var(--secondary-dark-color);
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: 1.05;
+}
+
+.aboutPageStandards {
+  display: grid;
+  gap: clamp(30px, 4vw, 52px);
+  padding: clamp(52px, 7vw, 96px) clamp(28px, 6vw, 80px);
+  background-color: var(--tertiary-color);
+}
+
+.aboutPageStandards ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.aboutPageStandards li {
+  display: grid;
+  align-items: center;
+  min-height: 150px;
+  padding: clamp(20px, 2.4vw, 30px);
+  color: var(--secondary-dark-color);
+  font-weight: 900;
+  background-color: var(--secondary-color);
+  border: 4px solid var(--secondary-dark-color);
+  box-shadow: 8px 8px 0 var(--secondary-dark-color);
+}
+
+@media (max-width: 950px) {
+  .aboutPageIntro,
+  .aboutPageValues,
+  .aboutPageOwnerCard {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutPageIntroContent {
+    border-right: 0;
+    border-bottom: 4px solid var(--secondary-dark-color);
+  }
+
+  .aboutPageImageWrap {
+    min-height: 420px;
+  }
+
+  .aboutPageOwnerImage {
+    min-height: 420px;
+  }
+
+  .aboutPageValuesGrid,
+  .aboutPageStandards ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .aboutPageHero {
+    min-height: 440px;
+  }
+
+  .aboutPageValuesGrid,
+  .aboutPageStandards ul {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* src/pages/contact.astro */
 

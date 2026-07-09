@@ -2,9 +2,66 @@
 import Footer from "../components/footer/footer.astro"
 import Header from "../components/header/header.astro"
 import siteContent from "../data/site-content.json"
+import { getAssetByPath } from "../utils/getAssetByPath"
 import "../styles/global.css"
+
+const companyInfo = siteContent.companyInfo
+const aboutPage = siteContent.pages.about
+const aboutContent = siteContent.components.sections.aboutSection
+const heroContent = siteContent.components.hero
+const aboutImage = getAssetByPath(aboutContent.image)
+const ownerImage = getAssetByPath(aboutPage.owner.image)
+const heroImage = getAssetByPath(heroContent.image)
 ---
 
 <Header />
-<h1>{siteContent.pages.about.heading}</h1>
+<main class="aboutPage">
+  <section class="aboutPageHero" style={`--about-hero-image: url(${heroImage.src})`}>
+    <div class="aboutPageHeroContent">
+      <p>{aboutPage.eyebrow}</p>
+      <h1>{aboutPage.heading} {companyInfo.businessName}</h1>
+    </div>
+  </section>
+
+  <section class="aboutPageStory">
+    <article class="aboutPageStoryCard aboutPageOwnerCard">
+      <div class="aboutPageOwnerImageWrap">
+        <img class="aboutPageOwnerImage" src={ownerImage.src} alt={aboutPage.owner.imageAlt} />
+      </div>
+      <div class="aboutPageOwnerContent">
+        <p>{aboutPage.owner.name}</p>
+        <h2>{aboutPage.owner.heading}</h2>
+        <p>{aboutPage.owner.body}</p>
+        <div class="aboutPageOwnerHistory">
+          <h3>{aboutPage.history.heading}</h3>
+          <p>{aboutPage.history.body}</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="aboutPageValues">
+    <div class="aboutPageValuesHeader">
+      <h2>{aboutPage.values.heading}</h2>
+      <p>{aboutPage.standards.heading}</p>
+    </div>
+    <div class="aboutPageValuesGrid">
+      {aboutPage.values.items.map((item) => (
+        <article class="aboutPageValue">
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="aboutPageStandards">
+    <h2>{aboutPage.standards.heading}</h2>
+    <ul>
+      {aboutPage.standards.items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </section>
+</main>
 <Footer />
