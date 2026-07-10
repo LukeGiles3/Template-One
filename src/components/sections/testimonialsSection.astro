@@ -2,7 +2,6 @@
 import siteContent from "../../data/site-content.json";
 
 const testimonialsContent = siteContent.components.sections.testimonialsSection;
-const companyInfo = siteContent.companyInfo;
 ---
 
 <section class="testimonialsSection">
@@ -12,7 +11,7 @@ const companyInfo = siteContent.companyInfo;
     <div class="testimonialsGrid">
       {testimonialsContent.items.map((item) => (
         <article class="testimonialCard">
-          <p class="testimonialQuote">"{item.quote.replaceAll("B. Mor & Moreaus", companyInfo.businessName)}"</p>
+          <p class="testimonialQuote">"{item.quote}"</p>
           <p class="testimonialName">{item.name}</p>
         </article>
       ))}

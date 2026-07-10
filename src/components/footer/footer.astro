@@ -6,7 +6,6 @@ const companyInfo = siteContent.companyInfo;
 const headerContent = siteContent.components.header;
 const footerContent = siteContent.components.footer;
 const footerLogo = getAssetByPath(companyInfo.logo.image);
-const footerCopyright = footerContent.copyright.replaceAll("B. Mor & Moreaus", companyInfo.businessName);
 ---
 
 <footer class="siteFooter">
@@ -67,6 +66,6 @@ const footerCopyright = footerContent.copyright.replaceAll("B. Mor & Moreaus", c
   </div>
 
   <div class="siteFooterBottom">
-    <p>&copy; {new Date().getFullYear()} {footerCopyright}</p>
+    <p>&copy; {new Date().getFullYear()} {companyInfo.businessName}. {footerContent.copyright}</p>
   </div>
 </footer>
