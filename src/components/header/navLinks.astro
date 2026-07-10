@@ -3,8 +3,22 @@ import NavLink from "../header/navLink.astro"
 import siteContent from "../../data/site-content.json";
 ---
 
-<div class="navLinks">
+<div class="navLinks desktopNavLinks">
   {siteContent.components.header.links.map(({ name, href }) => (
     <NavLink linkName={name} linkHref={href} />
   ))}
 </div>
+
+<details class="mobileNavMenu">
+  <summary class="mobileNavToggle" aria-label="Open navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </summary>
+
+  <div class="mobileNavPanel">
+    {siteContent.components.header.links.map(({ name, href }) => (
+      <NavLink linkName={name} linkHref={href} />
+    ))}
+  </div>
+</details>
