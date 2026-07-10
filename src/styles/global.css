@@ -1129,8 +1129,9 @@ body {
 
 /* src/components/header/header.astro */
 .site-header {
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
