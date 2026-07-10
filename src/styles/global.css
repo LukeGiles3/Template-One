@@ -41,8 +41,11 @@ h1, h3, h5 {
   position: relative;
   z-index: 1;
   display: grid;
+  justify-items: center;
+  justify-self: center;
   gap: 18px;
   width: min(1080px, 100%);
+  text-align: center;
 }
 
 .aboutPageHeroContent p {
@@ -321,7 +324,23 @@ h1, h3, h5 {
 
 @media (max-width: 680px) {
   .aboutPageHero {
+    align-items: center;
     min-height: 440px;
+    padding: 42px 18px;
+  }
+
+  .aboutPageHeroContent h1 {
+    max-width: 100%;
+    font-size: clamp(42px, 14vw, 58px);
+    line-height: 0.95;
+    overflow-wrap: anywhere;
+    text-shadow: 4px 4px 0 var(--secondary-dark-color);
+  }
+
+  .aboutPageHeroContent p {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: clamp(16px, 4.8vw, 20px);
   }
 
   .aboutPageValuesGrid,
@@ -411,6 +430,8 @@ h1, h3, h5 {
   display: grid;
   gap: 8px;
   margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
   padding: clamp(20px, 3vw, 30px);
   color: var(--secondary-dark-color);
   background-color: var(--tertiary-color);
@@ -420,6 +441,7 @@ h1, h3, h5 {
   font-weight: 900;
   line-height: 1.25;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .contactPageDetails span {
@@ -431,6 +453,23 @@ h1, h3, h5 {
 @media (max-width: 850px) {
   .contactPageInfo {
     grid-template-columns: 1fr;
+    padding: 44px 22px;
+    overflow: hidden;
+  }
+
+  .contactPageDetails {
+    gap: 18px;
+  }
+
+  .contactPageDetails a,
+  .contactPageDetails p {
+    padding: 22px;
+    box-shadow: 5px 5px 0 var(--secondary-dark-color);
+    font-size: clamp(20px, 6vw, 24px);
+  }
+
+  .contactPageInfoContent h2 {
+    font-size: clamp(42px, 13vw, 58px);
   }
 }
 
