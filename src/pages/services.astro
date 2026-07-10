@@ -3,45 +3,47 @@ import Footer from "../components/footer/footer.astro"
 import Header from "../components/header/header.astro"
 import siteContent from "../data/site-content.json"
 import { getAssetByPath } from "../utils/getAssetByPath"
-import "../styles/global.css"
+import PageLayout from "../layouts/PageLayout.astro"
 
 const servicesPage = siteContent.pages.services
 const servicesContent = siteContent.components.sections.servicesSection
 ---
 
-<Header />
-<main class="servicesPage">
-  <section class="servicesPageHero">
-    <div class="servicesPageHeroContent">
-      <p>{siteContent.companyInfo.location}</p>
-      <h1>{servicesPage.heading}</h1>
-      <div class="servicesDivider" aria-hidden="true">
-        <span class="servicesDividerLine"></span>
-        <span class="servicesDividerLeaf"></span>
-        <span class="servicesDividerLine"></span>
+<PageLayout title={`${siteContent.companyInfo.businessName} | Services`}>
+  <Header />
+  <main class="servicesPage">
+    <section class="servicesPageHero">
+      <div class="servicesPageHeroContent">
+        <p>{siteContent.companyInfo.location}</p>
+        <h1>{servicesPage.heading}</h1>
+        <div class="servicesDivider" aria-hidden="true">
+          <span class="servicesDividerLine"></span>
+          <span class="servicesDividerLeaf"></span>
+          <span class="servicesDividerLine"></span>
+        </div>
+        <p>{servicesPage.body}</p>
       </div>
-      <p>{servicesPage.body}</p>
-    </div>
-  </section>
+    </section>
 
-  <section class="servicesPageList">
-    {servicesContent.items.map((item, index) => (
-      <article class:list={["servicesPageItem", { "servicesPageItemReverse": index % 2 !== 0 }]}>
-        <div class="servicesPageItemImageWrap">
-          <img
-            class="servicesPageItemImage"
-            src={getAssetByPath(item.image).src}
-            alt={item.imageAlt}
-            loading="lazy"
-          />
-        </div>
-        <div class="servicesPageItemContent">
-          <p>Service {String(index + 1).padStart(2, "0")}</p>
-          <h2>{item.title}</h2>
-          <p>{item.body}</p>
-        </div>
-      </article>
-    ))}
-  </section>
-</main>
-<Footer />
+    <section class="servicesPageList">
+      {servicesContent.items.map((item, index) => (
+        <article class:list={["servicesPageItem", { "servicesPageItemReverse": index % 2 !== 0 }]}>
+          <div class="servicesPageItemImageWrap">
+            <img
+              class="servicesPageItemImage"
+              src={getAssetByPath(item.image).src}
+              alt={item.imageAlt}
+              loading="lazy"
+            />
+          </div>
+          <div class="servicesPageItemContent">
+            <p>Service {String(index + 1).padStart(2, "0")}</p>
+            <h2>{item.title}</h2>
+            <p>{item.body}</p>
+          </div>
+        </article>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</PageLayout>
