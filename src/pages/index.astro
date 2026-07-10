@@ -7,9 +7,10 @@ import ServicesSection from "../components/sections/servicesSection.astro"
 import Form from "../components/form/form.astro"
 import TestimonialsSection from "../components/sections/testimonialsSection.astro"
 import PageLayout from "../layouts/PageLayout.astro"
+import siteContent from "../data/site-content.json"
 ---
 
-<PageLayout>
+<PageLayout title={siteContent.pages.home.title} description={siteContent.pages.home.description}>
   <Header />
   <HeroContainer />
   <AboutSection />

@@ -1,5 +1,9 @@
 ---
-const { linkName, linkHref } = Astro.props;
+const { linkName, linkHref, isActive = false } = Astro.props;
 ---
 
-<a href={linkHref} class="nav-link">{linkName}</a>
+<a
+  href={linkHref}
+  class:list={["nav-link", { "nav-link-active": isActive }]}
+  aria-current={isActive ? "page" : undefined}
+>{linkName}</a>

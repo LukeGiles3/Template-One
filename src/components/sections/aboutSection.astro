@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets"
 import SecondaryButton from "../button/secondaryButton.astro"
 import siteContent from "../../data/site-content.json"
 import { getAssetByPath } from "../../utils/getAssetByPath"
@@ -14,6 +15,13 @@ const aboutImage = getAssetByPath(aboutContent.image)
         <SecondaryButton buttonText={aboutContent.buttonText} href={aboutContent.buttonHref}/>
     </div>
     <div class="aboutImgWrap">
-        <img class="aboutImg" src={aboutImage.src} alt={aboutContent.imageAlt}>
+        <Image
+          class="aboutImg"
+          src={aboutImage}
+          width={900}
+          alt={aboutContent.imageAlt}
+          loading="lazy"
+          decoding="async"
+        />
     </div>
 </section>

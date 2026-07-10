@@ -1,7 +1,13 @@
 ---
+import siteContent from "../data/site-content.json"
 import "../styles/global.css"
+import { getAssetByPath } from "../utils/getAssetByPath"
 
-const { title = "Best Landscaping Co" } = Astro.props
+const logoImage = getAssetByPath(siteContent.companyInfo.logo.image)
+const {
+  title = siteContent.pages.home.title,
+  description = siteContent.pages.home.description,
+} = Astro.props
 ---
 
 <!doctype html>
@@ -9,6 +15,11 @@ const { title = "Best Landscaping Co" } = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href={logoImage.src} />
     <title>{title}</title>
   </head>
   <body>

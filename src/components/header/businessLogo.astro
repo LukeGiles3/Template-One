@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import siteContent from "../../data/site-content.json";
 import { getAssetByPath } from "../../utils/getAssetByPath";
 
@@ -7,5 +8,10 @@ const logoImage = getAssetByPath(companyInfo.logo.image);
 ---
 
 <a href="/" class="logo-link">
-  <img src={logoImage.src} alt={companyInfo.logo.imageAlt} class="logo-img" />
+  <Image
+    src={logoImage}
+    width={160}
+    alt={companyInfo.logo.imageAlt}
+    class="logo-img"
+  />
 </a>

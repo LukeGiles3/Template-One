@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets"
 import Footer from "../components/footer/footer.astro"
 import Header from "../components/header/header.astro"
 import siteContent from "../data/site-content.json"
@@ -7,14 +8,12 @@ import PageLayout from "../layouts/PageLayout.astro"
 
 const companyInfo = siteContent.companyInfo
 const aboutPage = siteContent.pages.about
-const aboutContent = siteContent.components.sections.aboutSection
 const heroContent = siteContent.components.hero
-const aboutImage = getAssetByPath(aboutContent.image)
 const ownerImage = getAssetByPath(aboutPage.owner.image)
 const heroImage = getAssetByPath(heroContent.image)
 ---
 
-<PageLayout title={`${companyInfo.businessName} | About`}>
+<PageLayout title={`${companyInfo.businessName} | About`} description={aboutPage.description}>
   <Header />
   <main class="aboutPage">
     <section class="aboutPageHero" style={`--about-hero-image: url(${heroImage.src})`}>
@@ -27,7 +26,14 @@ const heroImage = getAssetByPath(heroContent.image)
     <section class="aboutPageStory">
       <article class="aboutPageStoryCard aboutPageOwnerCard">
         <div class="aboutPageOwnerImageWrap">
-          <img class="aboutPageOwnerImage" src={ownerImage.src} alt={aboutPage.owner.imageAlt} />
+          <Image
+            class="aboutPageOwnerImage"
+            src={ownerImage}
+            width={900}
+            alt={aboutPage.owner.imageAlt}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div class="aboutPageOwnerContent">
           <p>{aboutPage.owner.name}</p>

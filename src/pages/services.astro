@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets"
 import Footer from "../components/footer/footer.astro"
 import Header from "../components/header/header.astro"
 import siteContent from "../data/site-content.json"
@@ -7,9 +8,13 @@ import PageLayout from "../layouts/PageLayout.astro"
 
 const servicesPage = siteContent.pages.services
 const servicesContent = siteContent.components.sections.servicesSection
+const serviceItems = servicesContent.items.map((item) => ({
+  ...item,
+  imageAsset: getAssetByPath(item.image),
+}))
 ---
 
-<PageLayout title={`${siteContent.companyInfo.businessName} | Services`}>
+<PageLayout title={`${siteContent.companyInfo.businessName} | Services`} description={servicesPage.description}>
   <Header />
   <main class="servicesPage">
     <section class="servicesPageHero">
@@ -26,14 +31,16 @@ const servicesContent = siteContent.components.sections.servicesSection
     </section>
 
     <section class="servicesPageList">
-      {servicesContent.items.map((item, index) => (
+      {serviceItems.map((item, index) => (
         <article class:list={["servicesPageItem", { "servicesPageItemReverse": index % 2 !== 0 }]}>
           <div class="servicesPageItemImageWrap">
-            <img
+            <Image
               class="servicesPageItemImage"
-              src={getAssetByPath(item.image).src}
+              src={item.imageAsset}
+              width={900}
               alt={item.imageAlt}
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="servicesPageItemContent">

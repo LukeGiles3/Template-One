@@ -2,6 +2,7 @@
   "pages": {
     "about": {
       "heading": "about",
+      "description": "Learn about Best Landscaping Co, a locally owned landscaping company serving Utah County with owner-led service and clean workmanship.",
       "eyebrow": "Locally owned in Utah County",
       "introHeading": "Built around honest work and clean results",
       "introBody": "Best Landscaping Co was started to give homeowners a straightforward landscaping partner: clear communication, dependable scheduling, and outdoor work that looks sharp when the crew leaves.",
@@ -45,14 +46,19 @@
     },
     "contact": {
       "heading": "Contact Us",
+      "description": "Contact Best Landscaping Co for landscaping, sprinkler, retaining wall, garden, and lawn care projects in Utah County.",
       "eyebrow": "Ready to talk?",
       "body": "Send a quick message about your property, project, or repair need. We will review the details and get back to you with a clear next step.",
       "detailsHeading": "Contact Information",
       "detailsBody": "Prefer to reach out directly? Use the contact details and we will respond as soon as possible."
     },
-    "home": {},
+    "home": {
+      "title": "Best Landscaping Co",
+      "description": "Best Landscaping Co provides landscaping, sprinkler, retaining wall, and lawn care services across Utah County, Utah."
+    },
     "services": {
       "heading": "Utah Landscaping Services",
+      "description": "Explore landscaping, sprinkler installation and repair, retaining wall, garden, and lawn care services from Best Landscaping Co in Utah County.",
       "body": "From full landscape installs to irrigation upgrades and retaining wall work, we build outdoor spaces that are clean, functional, and built to last. Here is how we can improve the look and performance of your property."
     }
   },
@@ -93,8 +99,22 @@
     "form": {
       "heading": "Start Your Project",
       "body": "Tell us what you need and we will get back to you with a clear next step.",
+      "nameLabel": "Your name",
+      "namePlaceholder": "Jane Smith",
+      "phoneLabel": "Phone number",
+      "phonePlaceholder": "(385) 555-0123",
       "emailLabel": "Your email",
       "emailPlaceholder": "name@example.com",
+      "serviceLabel": "Project type",
+      "servicePlaceholder": "Select a service",
+      "serviceOptions": [
+        "Landscaping",
+        "Sprinkler Installation",
+        "Sprinkler Repair",
+        "Retaining Wall",
+        "Garden & Lawn Care",
+        "Other"
+      ],
       "messageLabel": "Your message",
       "messagePlaceholder": "What can we help with?",
       "submitLabel": "Send Message"

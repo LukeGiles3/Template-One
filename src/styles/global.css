@@ -608,6 +608,16 @@ body {
   font-size: 32px;
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 4px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
 /* COMPONENTS */
 /* src/components/button/primaryButton.astro */
 .primaryButton {
@@ -850,6 +860,7 @@ body {
 }
 
 .formField input,
+.formField select,
 .formField textarea {
   width: 100%;
   box-sizing: border-box;
@@ -864,12 +875,27 @@ body {
   outline: none;
 }
 
+.formField select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--secondary-dark-color) 50%),
+    linear-gradient(135deg, var(--secondary-dark-color) 50%, transparent 50%);
+  background-position:
+    calc(100% - 24px) 50%,
+    calc(100% - 16px) 50%;
+  background-size:
+    8px 8px,
+    8px 8px;
+  background-repeat: no-repeat;
+}
+
 .formField textarea {
   min-height: 180px;
   resize: vertical;
 }
 
 .formField input:focus,
+.formField select:focus,
 .formField textarea:focus {
   background-color: var(--primary-color);
   box-shadow: 3px 3px 0 var(--secondary-dark-color);
@@ -1158,6 +1184,11 @@ body {
   color: var(--secondary-color);
 }
 
+.nav-link-active {
+  color: var(--secondary-color);
+  box-shadow: inset 150px 0 0 0 var(--primary-dark-color);
+}
+
 /* src/components/header/navLinks.astro */
 .navLinks {
   display: flex;
@@ -1244,6 +1275,11 @@ body {
   }
 
   .mobileNavPanel .nav-link:hover {
+    color: var(--secondary-color);
+    box-shadow: inset 260px 0 0 0 var(--primary-dark-color);
+  }
+
+  .mobileNavPanel .nav-link-active {
     color: var(--secondary-color);
     box-shadow: inset 260px 0 0 0 var(--primary-dark-color);
   }

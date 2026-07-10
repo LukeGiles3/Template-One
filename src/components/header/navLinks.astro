@@ -1,11 +1,17 @@
 ---
 import NavLink from "../header/navLink.astro"
 import siteContent from "../../data/site-content.json";
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isActiveLink = (href: string) => {
+  const normalizedHref = href.replace(/\/$/, "") || "/";
+  return normalizedHref === currentPath;
+};
 ---
 
 <div class="navLinks desktopNavLinks">
   {siteContent.components.header.links.map(({ name, href }) => (
-    <NavLink linkName={name} linkHref={href} />
+    <NavLink linkName={name} linkHref={href} isActive={isActiveLink(href)} />
   ))}
 </div>
 
@@ -18,7 +24,7 @@ import siteContent from "../../data/site-content.json";
 
   <div class="mobileNavPanel">
     {siteContent.components.header.links.map(({ name, href }) => (
-      <NavLink linkName={name} linkHref={href} />
+      <NavLink linkName={name} linkHref={href} isActive={isActiveLink(href)} />
     ))}
   </div>
 </details>

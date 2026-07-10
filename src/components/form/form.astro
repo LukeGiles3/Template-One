@@ -16,13 +16,45 @@ const formContent = siteContent.components.form;
     method="POST"
   >
     <label class="formField">
+      <span>{formContent.nameLabel}</span>
+      <input
+        type="text"
+        name="name"
+        placeholder={formContent.namePlaceholder}
+        autocomplete="name"
+        required
+      >
+    </label>
+
+    <label class="formField">
+      <span>{formContent.phoneLabel}</span>
+      <input
+        type="tel"
+        name="phone"
+        placeholder={formContent.phonePlaceholder}
+        autocomplete="tel"
+      >
+    </label>
+
+    <label class="formField">
       <span>{formContent.emailLabel}</span>
       <input
         type="email"
         name="email"
         placeholder={formContent.emailPlaceholder}
+        autocomplete="email"
         required
       >
+    </label>
+
+    <label class="formField">
+      <span>{formContent.serviceLabel}</span>
+      <select name="service" required>
+        <option value="" selected disabled>{formContent.servicePlaceholder}</option>
+        {formContent.serviceOptions.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
+      </select>
     </label>
 
     <label class="formField">
