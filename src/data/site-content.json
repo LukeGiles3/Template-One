@@ -48,7 +48,7 @@
       "eyebrow": "Ready to talk?",
       "body": "Send a quick message about your property, project, or repair need. We will review the details and get back to you with a clear next step.",
       "detailsHeading": "Contact Information",
-      "detailsBody": "Prefer to reach out directly? Use the contact details below and we will respond as soon as possible."
+      "detailsBody": "Prefer to reach out directly? Use the contact details and we will respond as soon as possible."
     },
     "home": {},
     "services": {
@@ -58,7 +58,7 @@
   },
   "companyInfo": {
       "businessName": "Best Landscaping Co",
-      "phoneNumber": "+3856667243",
+      "phoneNumber": "(385) 666-7243",
       "email": "hello@bestlandscaping.com",
       "location": "Utah County, Utah",
       "logo": {

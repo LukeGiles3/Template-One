@@ -22,10 +22,6 @@ const companyInfo = siteContent.companyInfo
   <Form />
 
   <section class="contactPageInfo">
-    <div class="contactPageInfoContent">
-      <h2>{contactPage.detailsHeading}</h2>
-      <p>{contactPage.detailsBody}</p>
-    </div>
     <div class="contactPageDetails">
       <a href={`tel:${companyInfo.phoneNumber}`}>
         <span>Phone</span>
@@ -39,6 +35,10 @@ const companyInfo = siteContent.companyInfo
         <span>Service Area</span>
         {companyInfo.location}
       </p>
+    </div>
+    <div class="contactPageInfoContent">
+      <h2>{contactPage.detailsHeading}</h2>
+      <p>{contactPage.detailsBody}</p>
     </div>
   </section>
 </main>
